@@ -12,3 +12,9 @@ build:
 #		delve-into-docker-app
 env:
 	docker exec -it docker-dlv bash
+
+env-down:                                   ## Stop devcontainer.
+	docker-compose down --remove-orphans
+
+env-remove:
+	docker-compose down --volumes --remove-orphans
